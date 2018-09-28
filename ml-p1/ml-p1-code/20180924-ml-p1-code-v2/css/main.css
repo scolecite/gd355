@@ -34,7 +34,7 @@ div.with {
   div.vote {
     position: absolute;
     top: 30vh;
-    left: 12.5vw;
+    left: 16.5vw;
     width: 80vh;
   }
 
@@ -75,9 +75,9 @@ div.with {
     transform: rotate(180deg);
     transform-origin: 0% 0%;
     position: absolute;
-    left: 33vh;
-    top: 0vh;
-    width: 20vh;
+    left: 21.5vh;
+    top: 21.75vh;
+    width: 23vh;
   }
 
   polygon.ballot {
@@ -99,38 +99,42 @@ div.with {
   }
 
   div.module-two {
-    left: 20vh;
+    left: 42.75vh;
   }
 
   div.module-three {
-    left: 40vh;
+    left: 64.25vh;
   }
 
   div.module-four {
-    left: 60vh;
+    left: 85.75vh;
   }
 
   div.module-five {
-    left: 80vh;
+    left: 107.25vh;
+  }
+
+  div.module-six {
+    left: 128.5vh;
   }
 
   div.vote {
     position: absolute;
-    top: 20vh;
-    left: 8vw;
-    width: 80vw;
+    top: 23vh;
+    left: 22.5vw;
+    width: 50vw;
   }
 
   div.with {
     position: absolute;
-    top: 55vh;
-    left: 8vw;
-    width: 80vw;
+    top: 52.5vh;
+    left: 22.5vw;
+    width: 50vw;
   }
 
   /* Terminal Side Pattern Animation */
   div.terminalpat {
-    animation: berezka-left 10s infinite;
+    animation: berezka-left-t 10s infinite;
     animation-timing-function: linear;
   }
 
@@ -138,8 +142,9 @@ div.with {
     transform: rotate(0deg);
     transform-origin: 0% 0%;
     position: absolute;
-    top: 76vh;
-    width: 20vh;
+    top: 72.5vh;
+    left: 0vh;
+    width: 23vh;
   }
 
   polygon.terminal {
@@ -160,24 +165,24 @@ div.with {
     -webkit-animation-timing-function: steps(2, end);
   }
 
-  div.modulet-one {
-    left: 0vh;
-  }
-
   div.modulet-two {
-    left: 18vh;
+    left: 22.75vh;
   }
 
   div.modulet-three {
-    left: 36vh;
+    left: 45.25vh;
   }
 
   div.modulet-four {
-    left: 54vh;
+    left: 68vh;
   }
 
   div.modulet-five {
-    left: 72vh;
+    left: 90.5vh;
+  }
+
+  div.modulet-six {
+    left: 113vh;
   }
 
 }
@@ -190,14 +195,14 @@ div.with {
     position: absolute;
     top: 12vh;
     left: 27vw;
-    width: 80vh;
+    width: 40vw;
   }
 
   div.with {
     position: absolute;
     top: 58vh;
     left: 27vw;
-    width: 80vh;
+    width: 40vw;
   }
 
   /* Ballot Side Pattern Animation */
@@ -303,9 +308,6 @@ div.with {
 }
 
 
-
-
-
 /* Animations */
 /* Pop Left Right */
 @keyframes right-back {
@@ -329,12 +331,22 @@ div.with {
   }
 }
 
-@keyframes berezka-up {
+@keyframes berezka-left {
   0% {
     transform: translate(0, 0);
   }
 
   100% {
-    transform: translate(0, -32.5vh);
+    transform: translate(-21.4vh, 0);
+  }
+}
+
+@keyframes berezka-left-t {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(-22.5vh, 0);
   }
 }
