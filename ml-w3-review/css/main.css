@@ -1,0 +1,64 @@
+.box {
+  width: 10vh;
+  height: 10vh;
+    position: absolute;
+    animation: square-to-circle 2s 1s infinite cubic-bezier(1,.015,.295,1.225) alternate;
+}
+}
+
+.box-1 {
+  background-color: #ff0000;
+  top: 20vw;
+  left: 20vh;
+}
+
+.box-2 {
+  background-color: #ffa300;
+  top: 5vw;
+  left: 10vh;
+}
+
+.box-3 {
+  background-color: #ffe000;
+  top: 0vh;
+  left: 10vw;
+}
+
+.box-4 {  background-color: #9cff00;
+  top: 10vh;
+  left: 15vw;
+}
+
+.box-5 {  background-color: #00fff2;
+  top: 0vh;
+  left: 20vw;
+}
+
+
+@keyframes square-to-circle {
+  0%  {
+    border-radius:0 0 0 0;
+    background: #ff0000;
+    transform:rotate(0deg);
+  }
+  25%  {
+    border-radius:50% 0 0 0;
+    background:#ffa300;
+    transform:rotate(45deg);
+  }
+  50%  {
+    border-radius:50% 50% 0 0;
+    background: #ffe000;
+    transform:rotate(90deg);
+  }
+  75%  {
+    border-radius:50% 50% 50% 0;
+    background:#9cff00;
+    transform:rotate(135deg);
+  }
+  100% {
+    border-radius:50%;
+    background:#00fff2;
+    transform:rotate(180deg);
+  }
+}

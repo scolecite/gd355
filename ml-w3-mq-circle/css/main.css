@@ -1,0 +1,102 @@
+* {
+  transition: all .5s;
+}
+
+h1.mastercard {
+  font-size: 20vh;
+  font-family: 'Varela Round', sans-serif;
+  z-index: 2;
+  position: absolute;
+  top: 75vh;
+  left: 10vh;
+}
+
+.cir {
+  border-radius: 50%;
+  height: 60vh;
+  width: 60vh;
+  position: absolute;
+}
+
+.cir-1 {
+  background-color: #eb001b;
+  top: 40vh;
+  opacity: 0.4;
+  z-index: 1;
+}
+
+.cir-1a {
+  background-color: #eb001b;
+  top: 40vh;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+.cir-2 {
+  background-color: #f79e1b;
+  top: 5vh;
+  z-index: 0;
+}
+
+@media (max-width: 420px) {
+  h1.mastercard {
+    font-size: 0.4vh;
+     transform: rotate(-90deg);
+     top: 100vh;
+    right: 40vh;
+    color: white;
+    display: none;
+   }
+  .cir-1 {
+    top: 3vh;
+  }
+
+  .cir-1a {
+    top: 3vh;
+  }
+
+  .cir-2 {
+    top: 40vh;
+  }
+
+  .cir {
+    height: 50vh;
+    width: 50vh;
+  }
+}
+
+@media (max-width: 800px){
+  h1.mastercard {
+    font-size: 15vh;
+     transform: rotate(-90deg);
+     top: 69vh;
+    right: 25vh;
+    color: white;
+    display: none;
+   }
+
+}
+
+@media (min-width: 800px) {
+  .cir-1 {
+    top: 2vh;
+    left: 4vh;
+  }
+
+  .cir-1a {
+    top: 2vh;
+    left: 4vh;
+  }
+
+  .cir-2 {
+    top: 2vh;
+    left: 50vh;
+  }
+
+  .cir {
+    height: 70vh;
+    width: 70vh;
+  }
+}
+
+/* making a breakpoint for text to stack when it is smaller */

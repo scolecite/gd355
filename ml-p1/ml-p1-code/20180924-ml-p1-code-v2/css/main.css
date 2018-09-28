@@ -1,0 +1,340 @@
+/* General Settings */
+body {
+  background-color: #f7f2e8;
+  /* overflow: hidden; */
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+* {
+  transition: all .9s;
+}
+
+/* Small */
+div.vote {
+  position: absolute;
+  top: 10vh;
+  left: 8vh;
+  width: 80vh;
+}
+
+div.with {
+  position: absolute;
+  top: 60vh;
+  left: 8vh;
+  width: 80vh;
+}
+
+/* Wide */
+@media (min-width: 700px) and (max-height: 500px) {
+  div.vote {
+    position: absolute;
+    top: 30vh;
+    left: 12.5vw;
+    width: 80vh;
+  }
+
+  div.with {
+    position: absolute;
+    top: 30vh;
+    left: 45vw;
+    width: 110vh;
+  }
+}
+
+/* Tall */
+@media (max-width: 700px) and (min-height: 500px) {
+
+
+  /* Typography */
+  div.vote {
+    position: absolute;
+    top: 12vh;
+    left: 30vw;
+    width: 80vh;
+  }
+
+  div.with {
+    position: absolute;
+    top: 58vh;
+    left: 30vw;
+    width: 80vh;
+  }
+
+  /* Ballot Side Pattern Animation */
+  div.ballotpat {
+    animation: berezka-left 10s infinite;
+    animation-timing-function: linear;
+  }
+
+  div.ballotpat-module {
+    transform: rotate(180deg);
+    transform-origin: 0% 0%;
+    position: absolute;
+    left: 33vh;
+    top: 0vh;
+    width: 20vh;
+  }
+
+  polygon.ballot {
+    -webkit-animation-name: right-back;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: steps(2, end);
+  }
+
+  rect.ballot {
+    -webkit-animation-name: right-back;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: steps(2, end);
+  }
+
+  div.module-two {
+    left: 20vh;
+  }
+
+  div.module-three {
+    left: 40vh;
+  }
+
+  div.module-four {
+    left: 60vh;
+  }
+
+  div.module-five {
+    left: 80vh;
+  }
+
+  div.vote {
+    position: absolute;
+    top: 20vh;
+    left: 8vw;
+    width: 80vw;
+  }
+
+  div.with {
+    position: absolute;
+    top: 55vh;
+    left: 8vw;
+    width: 80vw;
+  }
+
+  /* Terminal Side Pattern Animation */
+  div.terminalpat {
+    animation: berezka-left 10s infinite;
+    animation-timing-function: linear;
+  }
+
+  div.terminalpat-module {
+    transform: rotate(0deg);
+    transform-origin: 0% 0%;
+    position: absolute;
+    top: 76vh;
+    width: 20vh;
+  }
+
+  polygon.terminal {
+    -webkit-animation-name: right-back;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: steps(2, end);
+  }
+
+  rect.terminal {
+    -webkit-animation-name: right-back;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: steps(2, end);
+  }
+
+  div.modulet-one {
+    left: 0vh;
+  }
+
+  div.modulet-two {
+    left: 18vh;
+  }
+
+  div.modulet-three {
+    left: 36vh;
+  }
+
+  div.modulet-four {
+    left: 54vh;
+  }
+
+  div.modulet-five {
+    left: 72vh;
+  }
+
+}
+
+/* Big */
+@media (min-width: 700px) and (min-height: 500px) {
+
+  /* Typography */
+  div.vote {
+    position: absolute;
+    top: 12vh;
+    left: 27vw;
+    width: 80vh;
+  }
+
+  div.with {
+    position: absolute;
+    top: 58vh;
+    left: 27vw;
+    width: 80vh;
+  }
+
+  /* Ballot Side Pattern Animation */
+  div.ballotpat {
+    animation: berezka-up 10s infinite;
+    animation-timing-function: linear;
+  }
+
+  div.ballotpat-module {
+    transform: rotate(90deg);
+    transform-origin: 0% 0%;
+    position: absolute;
+    left: 33vh;
+    top: 0vh;
+    width: 35vh;
+  }
+
+  polygon.ballot {
+    -webkit-animation-name: right-back;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: steps(2, end);
+  }
+
+  rect.ballot {
+    -webkit-animation-name: right-back;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: steps(2, end);
+  }
+
+  div.module-two {
+    top: 32.5vh;
+  }
+
+  div.module-three {
+    top: 65vh;
+  }
+
+  div.module-four {
+    top: 97.5vh;
+  }
+
+  div.module-five {
+    top: 130vh;
+  }
+
+  /* Terminal Side Pattern Animation */
+  div.terminalpat {
+    animation: berezka-up 10s infinite;
+    animation-timing-function: linear;
+  }
+
+  div.terminalpat-module {
+    transform: rotate(-90deg);
+    transform-origin: 0% 0%;
+    position: absolute;
+    right: 7vh;
+    width: 35vh;
+  }
+
+  polygon.terminal {
+    -webkit-animation-name: right-back;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: steps(2, end);
+  }
+
+  rect.terminal {
+    -webkit-animation-name: right-back;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: steps(2, end);
+  }
+
+  div.modulet-one {
+    top: 35.5vh;
+  }
+
+  div.modulet-two {
+    top: 67.5vh;
+  }
+
+  div.modulet-three {
+    top: 99.5vh;
+  }
+
+  div.modulet-four {
+    top: 131.5vh;
+  }
+
+  div.modulet-five {
+    top: 163.5vh;
+  }
+}
+
+
+
+
+
+/* Animations */
+/* Pop Left Right */
+@keyframes right-back {
+  0% {
+    transform: translate(0, -2vw);
+  }
+
+  100% {
+    transform: translate(0, 0vw);
+  }
+}
+
+/* Berezka */
+@keyframes berezka-up {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(0, -32.5vh);
+  }
+}
+
+@keyframes berezka-up {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(0, -32.5vh);
+  }
+}

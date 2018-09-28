@@ -1,0 +1,36 @@
+h1.title {
+font-size: 13vw;
+position: absolute;
+top: 10vh;
+left: 5.5vw;
+outline: 1px solid red;
+width: 88vw;
+color: blue;
+}
+
+@media (max-width: 320px) {
+  h1.title {
+    font-size: 20vw;
+    color: coral;
+  }
+}
+
+  @media (min-width: 800px) {
+    h1.title {
+      font-size: 10vw;
+      color: green;
+    }
+  }
+
+  @media (max-height: 200px) {
+    body {
+      background-color: black;
+    }
+  }
+
+  @media (max-height: 800px) and (min-height: 350px) {
+    body {
+      background-color: orange;
+    }
+  }
+/* making a breakpoint for text to stack when it is smaller */
