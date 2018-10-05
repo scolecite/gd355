@@ -5,7 +5,7 @@ body {
 }
 
 svg {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   display: block;
@@ -15,7 +15,29 @@ svg {
   transition: all .9s;
 }
 
+/* Terminal Pop-Up  WORK IN PROGRESS PLEASE IGNORE*/
+div.terminal {
+  display: none;
+}
+
+div.terminal-type {
+  position: absolute;
+  z-index: 10;
+}
+
+div.terminal-bg {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  z-index: 8;
+}
+
+div.terminal-ballotpat {
+  z-index: 10;
+}
+
 /* Small */
+
 div.type {
   position: absolute;
   top: 13vh;
@@ -23,8 +45,19 @@ div.type {
   width: 70vh;
 }
 
+div.vote {
+  width: 43vw;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
 div.with {
-  top: 40vh;
+  top: 2vh;
+  width: 43vw;
+  position: relative;
+  left: 0;
+
 }
 
 div.ballotpat {
@@ -82,19 +115,20 @@ div.terminalpat {
 
 /* Wide */
 @media (min-width: 700px) and (max-height: 500px) {
-  div.vote {
+  div.type {
+    display: flex;
     position: absolute;
-    top: 15vh;
-    left: 16.5vw;
-    width: 80vh;
+    left: 18vw;
+    top: 20vh;
+    width: 60vw;
   }
 
   div.with {
-    position: absolute;
-    top: 15vh;
-    left: 45vw;
-    width: 110vh;
+    width: 70vw;
+    margin-left: 2.5vw;
   }
+
+
 
   /* Wide Ballot Side Pattern Animation */
   div.ballotpat {
@@ -203,22 +237,6 @@ div.terminalpat {
 /* Tall */
 @media (max-width: 700px) and (min-height: 500px) {
 
-
-  /* Typography */
-  div.vote {
-    position: absolute;
-    top: 12vh;
-    left: 30vw;
-    width: 80vh;
-  }
-
-  div.with {
-    position: absolute;
-    top: 58vh;
-    left: 30vw;
-    width: 80vh;
-  }
-
   /* Tall Ballot Side Pattern Animation */
   div.ballotpat {
     animation: berezka-left 10s infinite;
@@ -272,18 +290,25 @@ div.terminalpat {
     left: 128.5vh;
   }
 
-  div.vote {
+  div.type {
     position: absolute;
-    top: 15vh;
-    left: 12.5vw;
-    width: 50vw;
+    top: 27vh;
+    left: 27vw;
+  }
+
+  div.vote {
+    width: 43vw;
+    position: relative;
+    top: 0;
+    left: 0;
   }
 
   div.with {
-    position: absolute;
-    top: 40vh;
-    left: 12.5vw;
-    width: 50vw;
+    top: 2vh;
+    width: 43vw;
+    position: relative;
+    left: 0;
+
   }
 
   /* Tall Terminal Side Pattern Animation */
@@ -348,13 +373,13 @@ div.terminalpat {
   /* Big Typography */
   div.type {
     position: absolute;
-    top: 10vh;
+    top: 13vh;
     left: 27vw;
     width: 40vw;
   }
 
   div.with {
-    top: 45vh;
+    top: 2vh;
   }
 
   /* Big  Ballot Side Pattern Animation */
