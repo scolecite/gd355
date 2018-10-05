@@ -481,7 +481,7 @@ div.terminalpat {
     top: 163.5vh;
   }
 
-  /* Terminal Pop-Up  WORK IN PROGRESS PLEASE IGNORE*/
+  /* Terminal Pop-Up*/
   div.terminal {
     display: block;
     z-index: 10;
