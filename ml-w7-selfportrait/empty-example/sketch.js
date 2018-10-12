@@ -3,8 +3,6 @@ function setup() {
   background(225, 210, 0);
 }
 
-
-
 function draw() {
 
   noStroke();
@@ -34,15 +32,15 @@ function draw() {
 
 
   // right ear
-  fill(222, 147, 152);
+  fill(240, 145, 119);
   ellipse(75, 300, 100, 150);
 
   // left ear
-  fill(222, 147, 152);
+  fill(240, 145, 119);
   ellipse(525, 300, 100, 150);
 
   // face
-  fill(247, 191, 190);
+  fill(249, 213, 181);
   ellipse(width / 2, height / 2, 450, 550);
 
   //Bang
@@ -61,18 +59,18 @@ function draw() {
 
   // pupils
   // Left
-  fill(0)
+  fill(83, 14, 1)
   var leftpupil = map(mouseX, 50, 200, 150, 155);
   rect(leftpupil - 30, 250, 50, 50, 5, );
 
   // Right
-  fill(0)
+  fill(83, 14, 1)
   var rightpupil = map(mouseX, 50, 200, 400, 405);
   rect(rightpupil - 30, 250, 50, 50, 5, );
 
   // Masking Rings
   noFill();
-  stroke(246, 211, 212)
+  stroke(248, 228, 213)
   strokeWeight(50);
   rect(100, 200, 130, 150, 5);
   rect(350, 200, 130, 150, 5);
@@ -80,11 +78,11 @@ function draw() {
   // tired lids
   // Left
   noStroke();
-  fill(222, 147, 152)
+  fill(240, 145, 119)
   rect(125, 240, 80, 20, 5, );
 
   // Right
-  fill(222, 147, 152)
+  fill(240, 145, 119)
   rect(375, 240, 80, 20, 5, );
 
 
@@ -100,7 +98,7 @@ function draw() {
 
   // Glasses
   noFill();
-  stroke(107, 55, 138)
+  stroke(52)
   strokeWeight(10);
   rect(75, 175, 175, 200, 5);
   rect(325, 175, 175, 200, 5);
@@ -111,12 +109,12 @@ function draw() {
 
   //Mouth
   strokeWeight(15);
-  stroke(241, 79, 74);
+  stroke(242, 114, 69);
   arc(290, 460, 100, 100, -PI, 0, );
 
   //Nose
-  fill(222, 147, 152);
-  stroke(222, 147, 152);
+  fill(240, 145, 119);
+  stroke(240, 145, 119);
   strokeWeight(20);
   strokeJoin(ROUND);
   triangle(285, 270, 270, 350, 305, 350);
