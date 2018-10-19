@@ -19,5 +19,5 @@ function draw() {
   colorMode(HSL, 360);
   noStroke();
   fill(hue, 200, 200);
-  ellipse(mouseX, mouseY, 100.100);
+  ellipse(mouseX, mouseY, 100, 100);
 }

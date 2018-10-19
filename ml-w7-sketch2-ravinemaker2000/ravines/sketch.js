@@ -19,6 +19,12 @@ function setup() {
   }
 }
 
+function preload() {
+  loadFont('assets/Studly Extrude Left.otf');
+  loadFont('assets/Studly Outline.otf');
+  loadFont('assets/Studly Regular.otf');
+}
+
 function draw() {
 
   background(54, 53, 110);
@@ -84,19 +90,19 @@ function draw() {
   fill(54, 53, 110);
   noStroke();
   textSize(72);
-  text('RAVINE MAKER 2000', width / 4, height / 4);
+  text('RAVINE MAKER 2000', width / 5, height / 5);
   textFont("Studly Outline");
 
   fill(88, 201, 233);
   noStroke();
   textSize(72);
-  text('RAVINE MAKER 2000', width / 4, height / 4);
+  text('RAVINE MAKER 2000', width / 5, height / 5);
   textFont("Studly Regular");
 
   fill(54, 53, 110);
   noStroke();
   textSize(72);
-  text('RAVINE MAKER 2000', width / 4, height / 4);
+  text('RAVINE MAKER 2000', width / 5, height / 5);
   textFont("Studly Extrude Left");
 
   noFill();
