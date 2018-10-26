@@ -32,10 +32,4 @@ function draw() {
 
   timing += 0.005;
   redTime++;
-
-  // if (frameCount % 500 == 0) {
-  //   background(255);
-  // }
-
-
 }
