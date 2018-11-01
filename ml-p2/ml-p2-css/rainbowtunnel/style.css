@@ -1,5 +1,6 @@
 body {
     overflow: hidden;
+    background-color: rgb(220, 220, 220);
 }
 
 div.ui-panel {
@@ -102,8 +103,6 @@ p {
     width: 100px;
     top: 10vh;
     cursor: pointer;
-    /* display: flex; */
-    /* flex-direction: column; */
 
 }
 
@@ -121,7 +120,7 @@ p {
 }
 
 /* Responsiveness */
-/* @media only screen and (max-width: 1100px) {
+/* @media (max-width: 1100px) {
     div.mini-settings {
         display: flex, wrap;
     }

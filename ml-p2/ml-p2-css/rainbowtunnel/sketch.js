@@ -5,7 +5,6 @@ var bwToggle;
 var bwDirection = true;
 var brightness;
 var bgToggle;
-var bg;
 var customToggle;
 var radio;
 var colorOne;
@@ -17,14 +16,18 @@ function setup() {
   hue = 0;
   brightness = 0;
 
+  // Create nmber of rotations Slider
   reflectSlider = createSlider(2, 20, 8);
   reflectSlider.class("slider");
   document.getElementsByClassName("reflect-settings")[0].appendChild(reflectSlider.elt);
 
+  // Color speed slider
   rateSlider = createSlider(1, 20, 8);
   rateSlider.class("slider");
   document.getElementsByClassName("rate-settings")[0].appendChild(rateSlider.elt);
 
+
+  // Create radio buttons to choose between rainbow, grayscale and custom colors.
   radio = createRadio();
   radio.class("radio-ass");
   radio.style("padding-top", "10px");
@@ -33,23 +36,26 @@ function setup() {
   radio.option('Custom');
   document.getElementsByClassName("color-settings")[0].appendChild(radio.elt);
 
+  // Create clear button.
   var resetButton = createButton("✖ Clear");
   resetButton.mousePressed(resetSketch);
   resetButton.class("reset-button-style");
   document.getElementsByClassName("reset-button")[0].appendChild(resetButton.elt);
 
+  // Create save button.
   var saveButton = createButton("✓ Save");
   saveButton.mousePressed(saveSketch);
   saveButton.class("save-button-style");
   document.getElementsByClassName("save-button")[0].appendChild(saveButton.elt);
   document.getElementById("defaultradio0-0").checked = true;
-  // radio.value("Rainbow");
 
+  // Create slider for "from" color
   colorOne = createSlider(0, 360, 0);
   colorOne.class("slider");
   colorOne.id("cone-slider");
   document.getElementsByClassName("colorone-settings")[0].appendChild(colorOne.elt);
 
+  // Create slider for "to" color
   colorTwo = createSlider(0, 360, 60);
   colorTwo.class("slider");
   colorTwo.id("ctwo-slider");
@@ -58,28 +64,31 @@ function setup() {
 
 }
 
+// Saves the canvas
 function saveSketch() {
   saveCanvas('vortexPaint', 'png');
 }
 
+// Clears the canvas
 function resetSketch() {
   clear();
 }
 
-
+// Changes background color of body.
 function bgChange() {
   var checkBox = document.getElementById("cbx");
   if (checkBox.checked == true) {
     document.body.style.backgroundColor = "rgb(30,30,30)";
     console.log('Checking!');
   } else {
-    document.body.style.backgroundColor = "rgb(250,250,250)";
+    document.body.style.backgroundColor = "rgb(220,220,220)";
     console.log('Unchecking!');
   }
 }
 
+// The Big "If Sandwich" that controls all brushes. 
 function draw() {
-  // rainbow paint
+  // Rainbow paint
   if (mouseIsPressed == true) {
     if (radio.value() == "Rainbow") {
       if (hue > 360) {
@@ -92,6 +101,7 @@ function draw() {
       noStroke();
       fill(hue, 200, 200);
 
+      // Grayscale paint
     } else if (radio.value() == "Grayscale") {
       if (brightness > 360) {
         bwDirection = false;
@@ -108,6 +118,7 @@ function draw() {
       noStroke();
       fill(200, 0, brightness);
 
+      // Custom paint
     } else if (radio.value() == "Custom") {
       if (colorOne.value() < colorTwo.value()) {
         if (hue < colorOne.value()) {
@@ -136,8 +147,6 @@ function draw() {
       colorMode(HSL, 360);
       noStroke();
       fill(hue, 200, 200);
-
-
     }
 
 
