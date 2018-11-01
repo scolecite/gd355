@@ -1,42 +1,168 @@
 var hue;
-var rainbow = true;
-var rate = 5;
-var radius;
+var rateSlider;
+var reflectSlider;
+var bwToggle;
+var bwDirection = true;
+var brightness;
+var bgToggle;
+var bg;
+var customToggle;
+var radio;
+var colorOne;
+var colorTwo;
 
 function setup() {
   createCanvas(windowWidth - 300, windowHeight);
-  background(220);
   smooth();
   hue = 0;
+  brightness = 0;
 
-  radius = createSlider(2, 10, 8);
-  radius.position(windowWidth - 250, 100);
+  reflectSlider = createSlider(2, 20, 8);
+  reflectSlider.class("slider");
+  document.getElementsByClassName("reflect-settings")[0].appendChild(reflectSlider.elt);
+
+  rateSlider = createSlider(1, 20, 8);
+  rateSlider.class("slider");
+  document.getElementsByClassName("rate-settings")[0].appendChild(rateSlider.elt);
+
+  radio = createRadio();
+  radio.class("radio-ass");
+  radio.style("padding-top", "10px");
+  radio.option('Rainbow');
+  radio.option('Grayscale');
+  radio.option('Custom');
+  document.getElementsByClassName("color-settings")[0].appendChild(radio.elt);
+
+  var resetButton = createButton("✖ Clear");
+  resetButton.mousePressed(resetSketch);
+  resetButton.class("reset-button-style");
+  document.getElementsByClassName("reset-button")[0].appendChild(resetButton.elt);
+
+  var saveButton = createButton("✓ Save");
+  saveButton.mousePressed(saveSketch);
+  saveButton.class("save-button-style");
+  document.getElementsByClassName("save-button")[0].appendChild(saveButton.elt);
+  document.getElementById("defaultradio0-0").checked = true;
+  // radio.value("Rainbow");
+
+  colorOne = createSlider(0, 360, 0);
+  colorOne.class("slider");
+  colorOne.id("cone-slider");
+  document.getElementsByClassName("colorone-settings")[0].appendChild(colorOne.elt);
+
+  colorTwo = createSlider(0, 360, 60);
+  colorTwo.class("slider");
+  colorTwo.id("ctwo-slider");
+  document.getElementsByClassName("colortwo-settings")[0].appendChild(colorTwo.elt);
+
 
 }
 
-function draw() {
+function saveSketch() {
+  saveCanvas('vortexPaint', 'png');
+}
 
+function resetSketch() {
+  clear();
+}
+
+
+function bgChange() {
+  var checkBox = document.getElementById("cbx");
+  if (checkBox.checked == true) {
+    document.body.style.backgroundColor = "rgb(30,30,30)";
+    console.log('Checking!');
+  } else {
+    document.body.style.backgroundColor = "rgb(250,250,250)";
+    console.log('Unchecking!');
+  }
+}
+
+function draw() {
+  // rainbow paint
   if (mouseIsPressed == true) {
-    if (rainbow) {
+    if (radio.value() == "Rainbow") {
       if (hue > 360) {
         hue = 0;
       } else {
-        hue += rate;
+        hue += rateSlider.value();
       }
-    }
-    colorMode(HSL, 360);
-    noStroke();
-    fill(hue, 200, 200);
 
+      colorMode(HSL, 360);
+      noStroke();
+      fill(hue, 200, 200);
+
+    } else if (radio.value() == "Grayscale") {
+      if (brightness > 360) {
+        bwDirection = false;
+      } else if (brightness < 0) {
+        bwDirection = true;
+      }
+      if (bwDirection == true) {
+        brightness += rateSlider.value();
+      } else {
+        brightness -= rateSlider.value();
+      }
+
+      colorMode(HSL, 360);
+      noStroke();
+      fill(200, 0, brightness);
+
+    } else if (radio.value() == "Custom") {
+      if (colorOne.value() < colorTwo.value()) {
+        if (hue < colorOne.value()) {
+          bwDirection = true;
+        } else if (hue > colorTwo.value()) {
+          bwDirection = false;
+        }
+        if (bwDirection == true) {
+          hue += rateSlider.value();
+        } else {
+          hue -= rateSlider.value();
+        }
+      } else {
+        if (hue > colorOne.value()) {
+          bwDirection = true;
+        } else if (hue < colorTwo.value()) {
+          bwDirection = false;
+        }
+        if (bwDirection == false) {
+          hue += rateSlider.value();
+        } else {
+          hue -= rateSlider.value();
+        }
+      }
+
+      colorMode(HSL, 360);
+      noStroke();
+      fill(hue, 200, 200);
+
+
+    }
+
+
+
+    // reflection
     translate(width / 2, height / 2);
-    for (var i = 0; i < radius.value(); i++) {
+    for (var i = 0; i < reflectSlider.value(); i++) {
       push();
       translate(0, 0);
-      rotate(TWO_PI * i / radius.value());
+      rotate(TWO_PI * i / reflectSlider.value());
       ellipse(mouseX, mouseY, mouseX / 2, mouseX / 2);
       ellipse(pmouseX, pmouseY, pmouseX / 2, pmouseX / 2);
       pop();
     }
   }
 
+  document.getElementsByClassName("slider-value-reflect")[0].innerHTML = reflectSlider.value()
+  document.getElementsByClassName("slider-value-rate")[0].innerHTML = rateSlider.value()
+  document.getElementsByClassName("colorone-indicator")[0].style.backgroundColor = "hsl(" + colorOne.value() + ", 80% , 60% )";
+  document.getElementsByClassName("colortwo-indicator")[0].style.backgroundColor = "hsl(" + colorTwo.value() + ", 80% , 60% )";
+
+
+  if (radio.value() == "Rainbow" || radio.value() == "Grayscale") {
+    document.getElementsByClassName("color-sliders")[0].setAttribute("style", "display:none");
+  } else {
+    document.getElementsByClassName("color-sliders")[0].setAttribute("style", "display:block");
+  }
 }

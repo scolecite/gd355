@@ -1,16 +1,130 @@
-div.ui-panel {}
+body {
+    overflow: hidden;
+}
+
+div.ui-panel {
+    height: 100%;
+    width: 25%;
+    background-color: #474747;
+    z-index: 100;
+    position: absolute;
+    box-shadow: 11vw 0 10vw 10vw #000000;
+    left: 75%;
+    display: flex;
+    flex-direction: column;
+}
 
 body {
     padding: 0;
     margin: 0;
     height: 100%;
-    background-color: #474747;
 }
 
-p.ui-label {
+img.logotype {
+    z-index: 2;
+    width: 50%;
+    position: relative;
+    left: 25%;
+    margin-top: 2vh;
+}
+
+p {
     font-family: sans-serif;
     color: white;
-    top: 50px;
-    right: 75px;
-    position: absolute;
+    position: relative;
+    font-family: "Azo Sans Regular", sans-serif;
+    letter-spacing: 0.05em;
+    font-size: 0.85em;
 }
+
+.ui-settings {
+    position: relative;
+    margin-top: 2vh;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.slider {
+    position: relative;
+}
+
+
+.mini-settings {
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider-value {
+    color: #79cd4f;
+    font-family: "Azo Sans Black", sans-serif;
+    margin-left: 0.25vw;
+}
+
+.toggleboy {
+    padding-top: 0.5vw;
+}
+
+.button {
+    z-index: 30;
+}
+
+.bg-z {
+    z-index: -99;
+}
+
+
+.colorone-settings {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.colortwo-settings {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* justify-content: space-evenly; */
+}
+
+#cone-slider {
+    top: -1vh;
+}
+
+#ctwo-slider {
+    top: -1vh;
+}
+
+.radio-ass {
+    font-family: "Azo Sans Regular", sans-serif;
+    letter-spacing: 0.05em;
+    font-size: 0.85em;
+    color: white;
+    width: 100px;
+    top: 10vh;
+    cursor: pointer;
+    /* display: flex; */
+    /* flex-direction: column; */
+
+}
+
+.color-sliders {
+    margin-top: 4vh;
+}
+
+.indicator {
+    position: relative;
+    top: 0.75vw;
+    width: 3vw;
+    height: 1.5vw;
+    /* background-color: red; */
+    border-radius: 50px;
+}
+
+/* Responsiveness */
+/* @media only screen and (max-width: 1100px) {
+    div.mini-settings {
+        display: flex, wrap;
+    }
+} */
+
+/* Override width/height of canvas property. */
