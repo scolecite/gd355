@@ -30,7 +30,7 @@ function setup() {
   // Create radio buttons to choose between rainbow, grayscale and custom colors.
   radio = createRadio();
   radio.class("radio-ass");
-  radio.style("padding-top", "10px");
+  radio.style("padding-top", "15px");
   radio.option('Rainbow');
   radio.option('Grayscale');
   radio.option('Custom');
@@ -78,9 +78,11 @@ function resetSketch() {
 function bgChange() {
   var checkBox = document.getElementById("cbx");
   if (checkBox.checked == true) {
+    document.body.style.transition = "all 0.2s";
     document.body.style.backgroundColor = "rgb(30,30,30)";
     console.log('Checking!');
   } else {
+    document.body.style.transition = "all 0.2s";
     document.body.style.backgroundColor = "rgb(220,220,220)";
     console.log('Unchecking!');
   }
@@ -163,14 +165,16 @@ function draw() {
     }
   }
 
+  // Color indicators
   document.getElementsByClassName("slider-value-reflect")[0].innerHTML = reflectSlider.value()
   document.getElementsByClassName("slider-value-rate")[0].innerHTML = rateSlider.value()
   document.getElementsByClassName("colorone-indicator")[0].style.backgroundColor = "hsl(" + colorOne.value() + ", 80% , 60% )";
   document.getElementsByClassName("colortwo-indicator")[0].style.backgroundColor = "hsl(" + colorTwo.value() + ", 80% , 60% )";
 
-
+  // Hide & show the custom settings.
   if (radio.value() == "Rainbow" || radio.value() == "Grayscale") {
     document.getElementsByClassName("color-sliders")[0].setAttribute("style", "display:none");
+
   } else {
     document.getElementsByClassName("color-sliders")[0].setAttribute("style", "display:block");
   }
