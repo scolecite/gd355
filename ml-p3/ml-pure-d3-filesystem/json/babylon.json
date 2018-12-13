@@ -1,0 +1,63 @@
+{
+    "name": "Babylonian Deities",
+    "children": [{
+            "name": "Apsu",
+            "children": [{
+                "name": "Lahmu & Lahamu",
+                "children": [{
+                    "name": "Anshar & Kishar",
+                    "children": [{
+                            "name": "Ea",
+                            "children": [{
+                                "name": "Marduk",
+                                "children": [{
+                                    "name": "Sarpantium",
+                                    "children": [{
+                                            "name": "Nabu"
+                                        },
+                                        {
+                                            "name": "Tashmetum"
+                                        }
+                                    ]
+                                }]
+                            }]
+                        },
+                        {
+                            "name": "Anu"
+                        },
+                        {
+                            "name": "Enlil"
+                        }
+                    ]
+                }]
+            }]
+        },
+
+        {
+            "name": "Tiamat",
+            "children": [{
+                    "name": "Kian Bradley",
+                    "children": [{
+                            "name": "Olga Bradley"
+                        },
+                        {
+                            "name": "Oleg Bradley"
+                        },
+                        {
+                            "name": "Igor Bradley"
+                        }
+                    ]
+                },
+                {
+                    "name": "Collette Bradley"
+                },
+                {
+                    "name": "Russell Bradley"
+                }
+            ]
+        },
+        {
+            "name": "Mummu"
+        }
+    ]
+}
