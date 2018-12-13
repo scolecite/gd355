@@ -73,7 +73,7 @@ var svg = d3.select("div#container")
     .classed("svg-content", true);
 
 
-// Distort the specified node to 80% of its parent. (BROKEN)
+// Distort the specified node to 80% of its parent. 
 function magnify(node) {
     if (parent = node.parent) {
         var parent,
@@ -89,8 +89,8 @@ function magnify(node) {
     }
 
     path.transition()
-        .duration(750)
-        .attrTween("d", arcTween);
+        .duration(750);
+    // .attrTween("d", arcTween); // Enable for hilarity.
 }
 
 // Recursively reposition the node at position x with scale k.
