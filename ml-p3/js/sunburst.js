@@ -193,26 +193,29 @@ function updateDrawing(fileName) {
             .style("fill", getColor)
             .on("click", magnify)
             .each(stash)
+
             .on("mouseover", function (d, i) {
-                d3.select(this)
+                d3.select(this).style("cursor", "pointer");
+                d3.select(this).attr("opacity", 0.3);
                 tooltip.text(d.name)
                     .style("opacity", 0.8)
                     .style("left", (d3.event.pageX) + 0 + "px")
                     .style("top", (d3.event.pageY) - 0 + "px");
-                if (d.name == "Sources") {
-                    return null;
-                }
             })
             .on("mouseout", function (d) {
                 d3.select(this).style("cursor", "default")
+                d3.select(this).attr("opacity", 1);
                 tooltip.style("opacity", 0);
-            });
+            })
 
+            .on("click", function (d, i) {
+                window.open("https://en.wikipedia.org/w/index.php?search=" + d.name + "&title=Special%3ASearch&fulltext=1.org")
+                // window.open("https://en.wikipedia.org/wiki" + d.name + "/")
+
+            });
     });
 
 }
-
-
 
 
 
