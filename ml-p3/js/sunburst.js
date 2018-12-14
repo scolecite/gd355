@@ -2,7 +2,7 @@
 $.ajaxSetup({
     async: false // very hacky
 });
-var listofFileNames = ["json/demo.json", "json/babylon.json", "json/genghis.json", "json/greek.json", ];
+var listofFileNames = ["json/demo.json", "json/babylon.json", "json/genghis.json", "json/greek.json", "json/norse.json", ];
 for (var i = 0; i < listofFileNames.length; i++) {
     var div = document.createElement('div');
     $.getJSON(listofFileNames[i], function (json) {
