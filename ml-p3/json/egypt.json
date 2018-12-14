@@ -1,171 +1,78 @@
 {
-    "name": "Template",
+    "name": "Egyptian Mythology",
     "children": [{
-            "name": "Mark Bradley",
+            "name": "Ra",
             "children": [{
-                    "name": "Kian Bradley",
+                    "name": "Hathor",
                     "children": [{
-                            "name": "Olga Bradley"
-                        },
-                        {
-                            "name": "Oleg Bradley"
-                        },
-                        {
-                            "name": "Igor Bradley"
-                        }
-                    ]
+                        "name": "Hathor"
+                    }]
                 },
                 {
-                    "name": "Collette Bradley"
+                    "name": "Sekhmet",
+                    "children": [{
+                        "name": "Ptah",
+                        "children": [{
+                                "name": "Imhotep"
+                            },
+                            {
+                                "name": "Nefertem"
+                            }
+                        ]
+                    }]
                 },
                 {
-                    "name": "Russell Bradley"
+                    "name": "Bastet"
+                },
+                {
+                    "name": "Maat"
                 }
             ]
         },
 
         {
-            "name": "Cindy Bradley",
+            "name": "Atum",
             "children": [{
-                    "name": "Kian Bradley",
+                    "name": "Shu",
                     "children": [{
-                            "name": "Olga Bradley"
-                        },
-                        {
-                            "name": "Oleg Bradley"
-                        },
-                        {
-                            "name": "Igor Bradley"
-                        }
-                    ]
+                        "name": "Geb",
+                        "children": [{
+                                "name": "Isis",
+                                "children": [{
+                                    "name": "Horus"
+                                }]
+                            },
+                            {
+                                "name": "Osiris"
+                            },
+                            {
+                                "name": "Nephthys",
+                                "children": [{
+                                    "name": "Anubis"
+                                }]
+                            },
+                            {
+                                "name": "Set",
+                                "children": [{
+                                    "name": "Thoth"
+                                }]
+                            },
+                            {
+                                "name": "Khepri"
+                            }
+                        ]
+                    }]
                 },
                 {
-                    "name": "Collette Bradley"
-                },
-                {
-                    "name": "Russell Bradley"
+                    "name": "Tefnut",
+                    "children": [{
+                        "name": "Nut"
+                    }]
                 }
             ]
         },
         {
-            "name": "Frobisher Bradley",
-            "children": [{
-                    "name": "Kian Bradley",
-                    "children": [{
-                            "name": "Olga Bradley"
-
-                        },
-                        {
-                            "name": "Oleg Bradley"
-                        },
-                        {
-                            "name": "Igor Bradley"
-                        }
-                    ]
-                },
-                {
-                    "name": "Collette Bradley"
-                },
-                {
-                    "name": "Russell Bradley"
-                }
-            ]
-        },
-        {
-            "name": "Bertram Bradley",
-            "children": [{
-                    "name": "Kian Bradley",
-                    "children": [{
-                            "name": "Olga Bradley"
-
-                        },
-                        {
-                            "name": "Oleg Bradley"
-                        },
-                        {
-                            "name": "Igor Bradley"
-                        }
-                    ]
-                },
-                {
-                    "name": "Collette Bradley"
-                },
-                {
-                    "name": "Russell Bradley"
-                }
-            ]
-        },
-        {
-            "name": "Chicken Bradley",
-            "children": [{
-                    "name": "Kian Bradley",
-                    "children": [{
-                            "name": "Olga Bradley"
-
-                        },
-                        {
-                            "name": "Oleg Bradley"
-                        },
-                        {
-                            "name": "Igor Bradley"
-                        }
-                    ]
-                },
-                {
-                    "name": "Collette Bradley"
-                },
-                {
-                    "name": "Russell Bradley"
-                }
-            ]
-        },
-        {
-            "name": "Buttercup Bradley",
-            "children": [{
-                    "name": "Kian Bradley",
-                    "children": [{
-                            "name": "Olga Bradley"
-
-                        },
-                        {
-                            "name": "Oleg Bradley"
-                        },
-                        {
-                            "name": "Igor Bradley"
-                        }
-                    ]
-                },
-                {
-                    "name": "Collette Bradley"
-                },
-                {
-                    "name": "Russell Bradley"
-                }
-            ]
-        },
-        {
-            "name": "Potato Bradley",
-            "children": [{
-                    "name": "Kian Bradley",
-                    "children": [{
-                            "name": "Olga Bradley"
-
-                        },
-                        {
-                            "name": "Oleg Bradley"
-                        },
-                        {
-                            "name": "Igor Bradley"
-                        }
-                    ]
-                },
-                {
-                    "name": "Collette Bradley"
-                },
-                {
-                    "name": "Russell Bradley"
-                }
-            ]
+            "name": "Amun"
         }
     ]
 }
