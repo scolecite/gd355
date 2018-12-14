@@ -2,7 +2,7 @@
 $.ajaxSetup({
     async: false // very hacky
 });
-var listofFileNames = ["json/demo.json", "json/babylon.json", "json/bible.json", "json/egypt.json", "json/genghis.json", "json/greek.json", "json/hindu.json", "json/rurik.json", "json/seljuq.json", "json/template.json"];
+var listofFileNames = ["json/demo.json", "json/babylon.json", "json/genghis.json", "json/greek.json", ];
 for (var i = 0; i < listofFileNames.length; i++) {
     var div = document.createElement('div');
     $.getJSON(listofFileNames[i], function (json) {
@@ -210,8 +210,6 @@ function updateDrawing(fileName) {
 
             .on("click", function (d, i) {
                 window.open("https://en.wikipedia.org/w/index.php?search=" + d.name + "&title=Special%3ASearch&fulltext=1.org")
-                // window.open("https://en.wikipedia.org/wiki" + d.name + "/")
-
             });
     });
 
